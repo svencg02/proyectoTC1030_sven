@@ -18,16 +18,11 @@
 using namespace std;
 
 int main(){
-    cout<<"hello world"<<endl;
     Orden orden1;
-    cout<<"1"<<endl;
     orden1.ejemplo();
-    cout<<"2"<<endl;
     cout<<orden1.get_num();
     orden1.muestra_combos();
-    cout<<"3"<<endl;
     orden1.muestra_tipos("Adulto");
-    cout<<"4"<<endl;
     cout<<"El precio final es de: \t"<<orden1.precio_final()<<endl;
     orden1.obten_combo(1);
     orden1.agrega_grande("Benja", "doble", "grande", 5);
