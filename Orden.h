@@ -28,8 +28,13 @@ public:
 };
 // se crean ejemplos para el programa
 void Orden::ejemplo(){
+    cout<<1.1<<endl;
     comb[num_combo] = new Grandes("Sven", num_combo, "Adulto", "doble", "grande", 3);
+    cout<<1.2<<endl;
+    comb[num_combo]->calcula_precio();
+    cout<<1.3<<endl;
     num_combo++;
+    cout<<1.4<<endl;
     comb[num_combo] = new Grandes("Liliana", num_combo, "Adulto", "sencilla", "chico", 1);
     num_combo++;
     comb[num_combo] = new Peques("Romina", num_combo, "Niño", "doble", 2);
@@ -41,7 +46,7 @@ void Orden::ejemplo(){
 void Orden::muestra_combos(){
     string aux;
     for (int i = 0; i < num_combo; i++){
-        aux = comb[num_combo]->get_combo();
+        aux = comb[i]->get_combo();
         cout<<"Combo: "<<num_combo<<" de: "<<aux<<endl;
     }
 };
