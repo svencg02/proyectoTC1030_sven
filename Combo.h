@@ -29,10 +29,8 @@ public:
 //Combo::~Combo(){}; //destructor
 
 string Combo::get_combo(){
-    cout<<"si llego"<<endl;
     string aux;
     aux = " "+cliente+" de tipo: "+tipo_combo+"\n";
-    cout<<aux<<endl;
     return aux;
 }
 
