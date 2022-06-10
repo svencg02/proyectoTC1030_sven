@@ -18,7 +18,7 @@ Para el avance del 3 de junio se implementa el primer main.cpp en donde incluimo
 
 Para el avance del 10 de junio tenemos el avance e implementación de abstracción de la clase Combo, además de modificar un poco el UML y terminar el README ya que estaba incompleto y faltaba descripción del proyecto
 
-# Qué haría tronar el código
+# Qué haría tronar el código?
 primeramente, la clase Orden tiene como límite 1000 objetos de tipo combo, si nosotros quisiéramos agregar más o intentar obtener un apuntador fuera de índice arrojaría error. 
 
 El objeto de tipo Combo es abstracto, por lo que la creación de un objeto de este tipo tronaría el programa ya que no se puede generar por el virtual puro que existe en el header
