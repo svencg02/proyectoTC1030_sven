@@ -15,18 +15,12 @@ protected:
     string tam_refresco;
 
 public:
-    Combo();
     Combo(string nom, int id, string tipo, string ham, string refresco):cliente(nom), combo_id(id), tipo_combo(tipo), tipo_hamb(ham), tam_refresco(refresco){};
-   // ~Combo();
     virtual double calcula_precio() = 0; //aplicamos abstaccion o virtual puro por lo que no se puede crear un objeto combo 
     virtual string imprime_combo(){string aux = "no aplica"; return aux;}; //aplicamos polimorfismo a traves del virtual
     string get_combo();
     string get_tipo();
 };
-
-//Combo::Combo(){} //falta constructor default
-
-//Combo::~Combo(){}; //destructor
 
 string Combo::get_combo(){
     string aux;
