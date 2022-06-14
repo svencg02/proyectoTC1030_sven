@@ -68,15 +68,16 @@ double Orden::precio_final(){
 double Orden::precio_final(string codigo_promo){
     if (codigo_promo == "EL_MEJOR_PROYECTO"){
         double suma=0;
-    for (int i = 0; i < num_combo; i++){
-        suma = suma + comb[i]->calcula_precio();
-    }
-    return suma*0.8;
+        for (int i = 0; i < num_combo; i++){
+            suma = suma + comb[i]->calcula_precio();
+        }
     }
     else {
         cout<<"el codigo es incorrecto, lo sentimos..."<<endl;
         precio_final();
+
     }
+    return suma*0.8;
 
 }
 //se agrega un combo de tipo peques
