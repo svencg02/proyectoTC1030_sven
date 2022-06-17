@@ -7,7 +7,15 @@ La intencion de este proyecto es simular un restaurante parecido a uno de comida
 
 En el archivo header Combo, nosotros creamos 3 clases, la primera que será la clase padre "Combo" y que además será abstracta, por lo que no se podrá generar ningún objeto de esta clase particular. La segunda y tercera, hijas de Combo, son Peques y Grandes que representarían el combo niño y adulto respectivamente. La clase Orden en su respectivo header nos permite crear un arreglo de apuntadores de tipo Combo donde podemos almacenar de manera ordenada los diferentes posibles combos que puede haber en una orden. 
 
+# Cambios en los avances 
 
+Para poder resolver el problema del UML cambié de proyecto y agregué una descripción 
+
+Para el segundo avance no tenia cpp, pero el main ya se actualizó y el programa corre sin ningun problema
+
+Para el tercer avance se implemento el polimorfismo y se corrigió el readme, el UML
+
+Para la última se agregó la clase abstracta de Combo y se comentó todo el código 
 # Bitacora de Cambios
 
 Primeramente, se estaba trabajando con un proyecto de streaming de música el cuál fue descartado para la el avnace del 27 de mayo dado que la complejidad del problema no me iba a permitir entregar un trabajo de calidad
