@@ -13,28 +13,28 @@
 #include <iostream>
 #include <string>
 #include "Combo.h"
-#include "Orden.h"
-#include <clocale>
-using namespace std;
+#include "Orden.h"// importamos los headers de las clases 
+#include <clocale>//importamos las librerias que vamos a utilizar 
+using namespace std; // utilizando el estandar de escritura 
 
 int main(){
-  setlocale(LC_CTYPE, "Spanish");
-  cout<<"bienvenido al sistema de hamburguesas..."<<endl<<"que te gustaría hacer?"<<endl;
+  setlocale(LC_CTYPE, "Spanish"); // para que se puedan ver las ñ 
+  cout<<"bienvenido al sistema de hamburguesas..."<<endl<<"que te gustaría hacer?"<<endl; 
   cout<<"1. correr simulacion"<<endl<<"2. hacer un ejemplo personalizado"<<endl;
   int opcion = 0;
   cin>>opcion;
   if (opcion == 1) {
     Orden orden1;
-    orden1.ejemplo();
+    orden1.ejemplo(); // se corren ejemplos de clases para hacer una demostracion simple 
     cout<<"en total hay: "<<orden1.get_num()<<" combos"<<endl;
-    orden1.muestra_combos();
+    orden1.muestra_combos(); // mostramos los combos almacenados en el heap 
     orden1.muestra_tipos("Adulto");
     cout<<"El precio final es de: \t"<<orden1.precio_final()<<endl;
-    orden1.obten_combo(1);
-    orden1.agrega_grande("Benja", "doble", "grande", 5);
+    orden1.obten_combo(1); // obtenemos el combo correspondiente a esa posicion 
+    orden1.agrega_grande("Benja", "doble", "grande", 5); // agregamos un nuevo objeto 
     orden1.agrega_peque("arturito", "sencilla", 4);
-    orden1.muestra_combos();
-    cout<<"el precio final actualizado es de con dos combos nuevos es: \t"<<orden1.precio_final()<<endl;
+    orden1.muestra_combos(); //  volvemos a mostrar los combos 
+    cout<<"el precio final actualizado es de con dos combos nuevos es: \t"<<orden1.precio_final()<<endl; //mostramos el precio final de todos los combos 
     }
   else if (opcion == 2){
     Orden orden2;
@@ -49,11 +49,11 @@ int main(){
         string tipo_hamburguesa;
         cin>>tipo_hamburguesa;
         for_each(tipo_hamburguesa.begin(), tipo_hamburguesa.end(), [](char & c) {
-          c = ::tolower(c);});
-        cout<<"cuantos juguetes quisiera agregar?"<<endl;
+          c = ::tolower(c);}); // se transforma cualquier string a minusculas 
+        cout<<"cuantos juguetes quisiera agregar?"<<endl; 
         int juguetes;
         cin>>juguetes;
-        orden2.agrega_peque(nombre, tipo_hamburguesa, juguetes);
+        orden2.agrega_peque(nombre, tipo_hamburguesa, juguetes); // se crea combo para peques 
       }
       else if (opcion == 2) {
         cout<<"por favor indica el nombre"<<endl;
@@ -72,9 +72,9 @@ int main(){
         cout<<"cuantos cupones quisiera agregar?"<<endl;
         int cupones;
         cin>>cupones;
-        orden2.agrega_grande(nombre, tipo_hamburguesa, tipo_refresco, cupones);
+        orden2.agrega_grande(nombre, tipo_hamburguesa, tipo_refresco, cupones); // se crea combo para adultos 
       };
-    } while (opcion != 3);
+    } while (opcion != 3); // cuando se deje de cumplir la condicion continua el codigo 
     cout<<"sus combos son: "<<endl;
     orden2.muestra_combos();
     cout<<"su precio final es: "<<orden2.precio_final()<<endl;
@@ -82,10 +82,10 @@ int main(){
     string juramento;
     cin>>juramento;
     if (juramento == "si"){
-      cout<<"su nuevo precio es: "<<orden2.precio_final("EL_MEJOR_PROYECTO")<<endl;
+      cout<<"su nuevo precio es: "<<orden2.precio_final("EL_MEJOR_PROYECTO")<<endl; // se hace un descuento del 20%
     }
     else{
-      cout<<"buuuuuuuu";
+      cout<<"buuuuuuuu \n";
     }
 
   };
